@@ -3,18 +3,18 @@
     "name": "Mews PWA test",
     "icons": [
       {
-        "src": "./image/launcher-icon-1x.jpg",
-        "type": "image/jpg",
+        "src": "./image/launcher-icon-1x.png",
+        "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "./image/launcher-icon-2x.jpg",
-        "type": "image/jpg",
+        "src": "./image/launcher-icon-2x.png",
+        "type": "image/png",
         "sizes": "96x96"
       },
       {
-        "src": "./image/launcher-icon-4x.jpg",
-        "type": "image/jpg",
+        "src": "./image/launcher-icon-4x.png",
+        "type": "image/png",
         "sizes": "192x192"
       }
     ],
