@@ -16,6 +16,14 @@
                     });
                 });
             }
+
+            const url = 'https://jsonplaceholder.typicode.com/posts/1';
+            fetch(url)
+                .then(data => data.json())
+                .then(json => {
+                    const pres = document.getElementsByTagName('pre');
+                    pres[0].textContent = JSON.stringify(json, null, '\t');
+                })
         </script>
 
         <style>
@@ -29,7 +37,8 @@
         </style>
     </head>
     <body>
-        <h1>There is an image</h1>
+        <pre></pre>
+        <img src="./image/notCached.png" />
         <img src="./image/img.jpg" />
     </body>
 </html>
