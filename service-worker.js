@@ -8,6 +8,10 @@ self.addEventListener('install', event => {
             return self.skipWaiting();
         })
     );
+    event.registerForeignFetch({
+		scopes:['/'],
+		origins:['*'] // or simply '*' to allow all origins - jsonplaceholder.typicode.com
+	});
 });
 
 self.addEventListener('fetch', function(event) {
@@ -16,4 +20,15 @@ self.addEventListener('fetch', function(event) {
         return response || fetch(event.request);
         })
     );
+});
+
+
+self.addEventListener('foreignfetch', event => {
+	event.respondWith(fetch(event.request).then(response => {
+		return {
+			response: response,
+			origin: event.origin,
+			headers: ['Content-Type']
+		}
+	}));
 });
